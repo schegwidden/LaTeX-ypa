@@ -1,0 +1,279 @@
+%-------------------------
+% Resume in Latex
+% Author: Chegwidden
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Seamus Chegwidden} % Your Name
+\newcommand{\phone}{(347) 410-2818} % Your Phone Number
+\newcommand{\emaila}{seamus.chegwidden@gmail.com} %Email 1
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+
+
+\parbox{2.35cm}{%
+\includegraphics[width=2.38cm,clip]{logosystem-flame-2022-600x250.jpg}}
+\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r} \\
+  \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +1-\phone}\\
+   & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
+ 
+\end{tabularx}
+}
+% \parbox{3.0cm}{%
+% \flushright \includegraphics[width=2cm,clip]{nitp_logo.png}
+% }
+
+
+
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of North Dakota, Grand Forks, ND}{GPA:3.65}
+       \item{August 2020 - May 2024}
+       \vspace{-3.5mm}
+       \item{{BS Mechanical Engineering}}
+       \vspace{-3.5mm}
+       \item{{Minor in Physics}}
+       \vspace{-3.5mm}
+       \item{{Minor in Mathematics}}
+  \resumeSubHeadingListEnd
+  \vspace{-8mm}
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{Work Experience}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {CyberInfrastructure Engineer}{Grand Forks, ND}
+      {University of North Dakota}{October 2022 - Present}
+      \vspace{-1.0mm}
+      \resumeItemListStart
+    \item {System administrator support of user issues on Linux (RHEL) HPC cluster}
+    
+    \item {Configure virtual machine host setups and install scientific software on HPC cluster}
+    
+    \item {Helped configure Open OnDemand for HPC cluster. Manage VR/AI lab for student researchers}
+
+    \item {Repair/Install HPC equipment at the University's Data Center}
+
+    \item {Experience with MPI/OpenMP, Lustre/GPFS, Docker, Globus, Slurm, and many other HPC related packages}
+
+    \item Actively setting up a GH200 Grace Hopper Superchip based cluster from scratch and creating test environments
+    
+    \resumeItemListEnd
+    
+    \vspace{-1.50mm}
+    
+    \resumeSubheading
+      {Materials Research Engineer}{Grand Forks, ND}
+      {University of North Dakota}{August 2023 - Present}
+      \vspace{-1.0mm}
+      \resumeItemListStart
+    \item{Long-term study on MAX/MAB phase ceramics with US Army Research Laboratory (ARL)}
+    \item{Manufactured over 200 grams of $Cr_2AlC$ and/or $MoAlB$ with a purity of $\geq 95\%$}
+    \item Performed tribological studies on non-oxide ceramics such as aluminum nitride, silicon carbide, and silicon nitride
+    \item Coordinated with NASA Langley to design and fit a 3D sleeve for tribological study of lunar dust simulate 
+    \item Gained familiarity with instruments such as XRD, HIP, sintering furnace, tribometers, and more
+    \item Presented a poster on non-oxide ceramics at ICACC 2024 in Daytona Beach, Florida
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Mathematics and Computer Science Intern}{Lemont, IL}
+      {Argonne National Laboratory, U.S. Department of Energy}{June 2022 - August 2022}
+      \vspace{-1mm}
+      \resumeItemListStart
+    \item {Researched matrix-free iterative PT GPU-based solver’s performance for large-scale glacial ice-sheet models}
+    \item {Implemented python optimization methods to solve governing ice flow equations more quickly}
+    \item{Researched the effect of multiple GPUs on code performance/run-time. Extensive use of CUDA and C++}
+    \item{Performed all research and analysis as an end-user on Argonne's HPC cluster}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+    \vspace{-6.0mm}
+
+
+\vspace{-2mm}
+
+
+
+%-----------PROJECTS-----------------
+\section{\textbf{Personal Projects}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+    \resumeProject
+      {Design and Manufacture of a Beowulf Cluster} 
+      {\vspace{-4mm}}
+      {July 2023 - March 2024} 
+
+        \item {Designed and manufactured a Beowulf Cluster. Composed of six Raspberry Pi4's. The cluster's chassis was CAD-modeled and 3D-printed}
+             \vspace{-2mm}
+        \item {Custom fit seven Ethernet cables, configured Slurm and various useful engineering software. Donated to UND's school of electrical engineering and computer science for student use }
+        \resumeItemListStart
+    \resumeItemListEnd
+         
+  \resumeSubHeadingListEnd
+\vspace{-16mm}
+
+
+
+%-----------Positions of Responsibility-----------------
+\section{\textbf{Positions of Responsibility}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{Vice President, } % Position
+    {American Society of Mechanical Engineers (ASME)} %Club,Event
+    {August 2022 - Present}
+    \vspace{-1mm}
+    \item{Outreached to guest speakers from nearby companies to come speak at UND. Organized student organization fundraising events. Designed and advertised ASME apparel. Active in community volunteering}
+    \vspace{-2mm}
+\resumePOR{Treasurer, } % Position
+    {Philosophy Club} %Club,Event
+    {August 2023 - Present} %Tenure Period
+    \vspace{-2mm}
+        \item{Oversee finances for UND's philosophy club}
+\resumePOR{Joint Relations Officer, } % Position
+    {Association for Computing Machinery (ACM)} %Club,Event
+    {August 2023 - Present} 
+    \vspace{-2mm}
+        \item{Responsible for communicating with student organizations within the College of Engineering and managing ACM-related projects}
+\resumeSubHeadingListEnd
+\vspace{-7mm}
+
+
+%-----------Technical skills-----------------
+
+\section{\textbf{Technical Skills}}
+\vspace{-0.4mm}
+     \textbf{Technology}{: Linux, C++, Creo-Parametric, ANSYS, MATLAB, and High Performance Computing } \\ \vspace{1mm}
+     \textbf{Relevant Coursework}{: CFD, High Temp. Materials, Partial DE, Composite Materials, and Nuclear Physics } \\ 
+     
+ \end{itemize}
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+
+\end{document}
