@@ -1,0 +1,243 @@
+\documentclass[a4paper, twoside]{article}
+
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+%% Useful packages
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage[top=3cm, bottom=4cm, left=3.5cm, right=3.5cm]{geometry}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd, fancyhdr, color, comment, graphicx, environ}
+\usepackage{float}
+\usepackage{mathrsfs}
+\usepackage[math-style=ISO]{unicode-math}
+%\setmathfont{TeX Gyre Termes Math}
+\usepackage{lastpage}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+\usepackage{fancyhdr}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{sectsty}
+\usepackage{thmtools}
+\usepackage{shadethm}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{longtable}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Environment setup
+\mdfsetup{skipabove=\topskip,skipbelow=\topskip}
+\newrobustcmd\ExampleText{%
+An \textit{inhomogeneous linear} differential equation has the form
+\begin{align}
+L[v ] = f,
+\end{align}
+where $L$ is a linear differential operator, $v$ is the dependent
+variable, and $f$ is a given non−zero function of the independent
+variables alone.
+}
+\mdfdefinestyle{theoremstyle}{%
+linecolor=black,linewidth=1pt,%
+frametitlerule=true,%
+frametitlebackgroundcolor=gray!20,
+innertopmargin=\topskip,
+}
+\mdtheorem[style=theoremstyle]{Problem}{Problem}
+\newenvironment{Solution}{\textbf{Solution.}}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Fill in the appropriate information below
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}     
+\newcommand\course{XXXX0000}                            % <-- course name   
+\newcommand\hwnumber{0}                                 % <-- homework number
+\newcommand\Information{Someone}                        % <-- personal information
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Page setup
+\pagestyle{fancy}
+\headheight 35pt
+\lhead{\today}
+\rhead{\includegraphics[width=2.5cm]{latex-und-logo.png}}
+\lfoot{}
+\pagenumbering{arabic}
+\cfoot{\small\thepage}
+\rfoot{}
+\headsep 1.2em
+\renewcommand{\baselinestretch}{1.25}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Add new commands here
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\NN}{\mathbb N}
+\newcommand{\PP}{\mathbb P}
+\DeclareMathOperator{\Mod}{Mod} 
+\renewcommand\lstlistingname{Algorithm}
+\renewcommand\lstlistlistingname{Algorithms}
+\def\lstlistingautorefname{Alg.}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem{case}{Case}
+\newcommand{\assign}{:=}
+\newcommand{\infixiff}{\text{ iff }}
+\newcommand{\nobracket}{}
+\newcommand{\backassign}{=:}
+\newcommand{\tmmathbf}[1]{\ensuremath{\boldsymbol{#1}}}
+\newcommand{\tmop}[1]{\ensuremath{\operatorname{#1}}}
+\newcommand{\tmtextbf}[1]{\text{{\bfseries{#1}}}}
+\newcommand{\tmtextit}[1]{\text{{\itshape{#1}}}}
+
+\newenvironment{itemizedot}{\begin{itemize} \renewcommand{\labelitemi}{$\bullet$}\renewcommand{\labelitemii}{$\bullet$}\renewcommand{\labelitemiii}{$\bullet$}\renewcommand{\labelitemiv}{$\bullet$}}{\end{itemize}}
+\catcode`\<=\active \def<{
+\fontencoding{T1}\selectfont\symbol{60}\fontencoding{\encodingdefault}}
+\catcode`\>=\active \def>{
+\fontencoding{T1}\selectfont\symbol{62}\fontencoding{\encodingdefault}}
+\catcode`\<=\active \def<{
+\fontencoding{T1}\selectfont\symbol{60}\fontencoding{\encodingdefault}}
+\title{Title}
+\author{Your Name}
+
+
+\begin{document}
+\input{title/title.tex}
+\pagestyle{fancy}
+\headheight 35pt
+\lhead{\today}
+\rhead{\includegraphics[width=2.5cm]{latex-und-logo.png}}
+\lfoot{}
+\pagenumbering{arabic}
+\cfoot{\small\thepage}
+\rfoot{}
+\headsep 1.2em
+\renewcommand{\baselinestretch}{1.25}\newpage 
+
+\section{Preface}
+This paper will examine and summarize the peer-reviewed article, \textit{Fabrication of high-strength magnetocaloric  $Fe_2AlB_2$ MAB phase ceramics via combustion synthesis and hot pressing}, published by A.Yu Potanin. The article \textit{Nucleation and growth of the $Fe_2AlB_2$ MAB phase in the combustion wave of mechanically activated Fe–Al–B reaction mixtures}, also published by A.Yu Potanin, will be references in this paper as well. 
+
+\section{Introduction}
+A.Yu. Potanin's research focuses on layered ceramics and their potential for various applications, particularly in the context of the MAB and MAX phases. The MAX phases, characterized by the formula $M_{n+1}AX_n$ (where M represents a transition metal, A is typically a p-element such as Si, Ge, or Al, and X is either carbon or nitrogen), are known for their unique properties. These compounds combine metal-like features, such as high electrical and thermal conductivity, with ceramic-like attributes, including strength, damage tolerance, and resistance to chemical aggression and thermal shock. Their hexagonal structure, with alternating layers of A and MX elements, contributes to these properties.\\
+
+Another group of compounds with a similar structure and promising characteristics is the MAB phases. These consist of transition metals, elements from groups IIIA-VIA (commonly aluminum), and boron. Potanin's work explores the orthorhombic and hexagonal structures of MAB phases, focusing on compositions like MAlB (with Mo or W), $M_2AlB_2$ (with Cr, Mn, or Fe), $Cr_3AlB_4$, and $Cr_4AlB_6$. These phases are relatively new, with strong covalent bonds contributing to their high elastic stiffness, while weaker bonds allow for high fracture toughness and damage tolerance. Among the MAB phases, MoAlB and $Fe_2AlB_2$ have gained significant interest. MoAlB is notable for its resistance to oxidation at elevated temperatures, making it a candidate for high-temperature structural materials. $Fe_2AlB_2$ has caught researchers' attention due to its significant magnetocaloric effect (MCE), which has applications in magnetic refrigeration. The MCE involves temperature changes in magnetic materials under varying magnetic fields, presenting a potentially environmentally friendly alternative to traditional cooling technologies.\\
+
+Magnetic refrigeration, a technology that relies on the MCE, is highlighted as a greener and more energy-efficient option compared to vapor compression systems. It could play a role in reducing carbon emissions and harmful refrigerant leaks. $Fe_2AlB_2$, with its significant MCE, is explored for use in magnetic cooling and energy storage systems. Potanin's research acknowledges the challenges in producing single-phase Fe2AlB2, often requiring complex processes and long annealing times. To address these, he explores self-propagating high-temperature synthesis (SHS), an energy-efficient technique that utilizes exothermic reactions to create refractory compounds in a single cycle. This method, combined with mechanical activation, can produce submicron powders with enhanced sinterability and higher density ceramics. Potanin's work investigates $Fe_2AlB_2$ ceramics produced through SHS in the layer-by-layer combustion mode, analyzing their macrokinetic characteristics and comparing them with those obtained through conventional methods. The high heating and cooling rates in SHS lead to unique material properties, making it a compelling area of study for advancing MAB phases and their applications. [1]
+
+\section{Materials and Methods}
+A.Yu. Potanin's study explores the synthesis and analysis of $Fe_2AlB_2$ ceramics, focusing on the materials, methods, and comprehensive results. The researchers used carbonyl-derived iron, aluminum, and amorphous boron in a 2:1.12:2 molar ratio, with an excess of aluminum to address potential oxidation during the mixing and annealing process. The powders were mixed in a planetary ball mill, ensuring proper homogeneity before undergoing self-propagating high-temperature synthesis (SHS) in a layer-by-layer combustion mode. The synthesis process involved pressing the powder mixture into cylindrical pellets and igniting them with a tungsten coil in an SHS-3 reactor under an argon atmosphere. The combustion reached temperatures of 1110°C with a velocity of 0.37 cm/s, producing a porous sintered mass, which was then ground to create the desired powder. The SHS powder's particle size distribution was analyzed using a laser particle analyzer, revealing a range that reflected the effectiveness of the grinding process. The SHS powder was subsequently hot-pressed in a vacuum at 1100°C with a pressure of 30 MPa for consolidation. To evaluate the mechanical properties of the consolidated $Fe_2AlB_2$ ceramics, the research team performed Vickers hardness tests and bending strength measurements. They also assessed fracture toughness using the single-edge notched beam (SENB) method. The results showed that the ceramics exhibited good hardness and bending strength, suggesting they have a high resistance to mechanical stress and damage. \\
+
+The thermal properties were also examined. Heat capacity and thermal diffusivity were measured using specialized equipment, providing insights into the material's thermal conductivity. Additionally, oxidation resistance was tested in an electric muffle furnace at 1000°C. The samples were weighed at intervals to track the oxidation rate over time. The data indicated that $Fe_2AlB_2$ had relatively stable oxidation resistance under these conditions. The magnetocaloric effect (MCE) was another focus of the study. Potanin's team measured the MCE by observing temperature changes in the ceramics under an adiabatic change in the external magnetic field. This required a system of permanent magnets and precision thermocouples to ensure accurate measurements. The results indicated that $Fe_2AlB_2$ ceramics exhibited a noticeable magnetocaloric effect, supporting their potential use in magnetic refrigeration applications. \\
+
+For structural analysis, a scanning electron microscope (SEM) provided detailed imagery of the ceramics' microstructure. The micro-X-ray spectral analysis and X-ray diffraction (XRD) allowed the team to examine the phase composition and lattice parameters. The diffraction data, processed using a simplified Rietveld method, revealed the presence of expected phases and provided a deeper understanding of the ceramics' crystallographic structure. Overall, the data and results obtained from this study demonstrate the potential of $Fe_2AlB_2$ ceramics in various applications, particularly in magnetic refrigeration, due to their unique combination of mechanical, thermal, and magnetocaloric properties. The comprehensive analysis provided by Potanin's team serves as a valuable contribution to the field of MAB phase ceramics and their practical applications.
+
+\newpage 
+\section{Results and Discussion}
+The synthesis products from self-propagating high-temperature synthesis (SHS) consist of rounded grains of the MAB phase, with a size of up to 2 micrometers and an $Fe_2AlB_2$ composition. These grains have a morphology that differs from the typical lamellar shape observed in previous studies of MoAlB and $Fe_2AlB_2$. The high dispersion of the synthesis products can be attributed to the small-scale heterogeneity of the mechanically activated reactive mixture, which leads to significant acceleration in the nucleation of the target phase. This rapid transformation, combined with high heating and cooling rates at relatively low combustion temperatures, results in a fine-grained structure. \\
+
+After grinding the synthesis products, the SHS powder consists of agglomerates of highly dispersed fragmentary and polyhedral MAB phase grains. The particle size distribution exhibits a normal pattern, with an average size of 12.8 micrometers and a maximum agglomerate size of up to 57 micrometers. Analysis of the phase composition revealed that 98.6\% of the SHS powder is the $Fe_2AlB_2$ phase, with 1.4\% consisting of iron monoboride (FeB) as an impurity. X-ray diffraction (XRD) analysis confirmed the absence of aluminum oxide ($Al_2O_3$) or intermetallic compounds like $Al_xFe_y$, which can be problematic in other synthesis methods for $Fe_2AlB_2$. The measured lattice parameters for the MAB phase are consistent with those reported in the literature. To find the optimal consolidation temperature for $Fe_2AlB_2$, differential scanning calorimetry (DSC) was used to identify key thermal events. The endothermic peak at 1284 degrees centigrade during heating indicates the peritectic decomposition of $Fe_2AlB_2$ into FeB and melt. During cooling, two exothermic peaks were observed: one at 1225 degrees centigrade corresponding to $Fe_2AlB_2$ crystallization, and another at 1065 degrees centigrade indicating the formation of an intermediate phase of iron boride or intermetallic compounds. These observations suggest that a hot pressing temperature of 1100 degrees centigrade is suitable for producing single-phase ceramics while avoiding decomposition. \\
+
+Hot pressing at this temperature yielded $Fe_2AlB_2$ ceramics with a dense and layered structure. The microstructure comprises grains of the target phase with an average size of 2–5 micrometers. Fracture analysis showed high relative density without visible large pores, and the uniform distribution of $Al_2O_3$ particles with sizes ranging from 70 to 200 nanometers contributed to the dispersion strengthening of the composite. This structure resulted in improved mechanical properties like increased hardness and bending strength. XRD analysis revealed that the hot-pressed ceramics consisted solely of the orthorhombic phase $Fe_2AlB_2$, confirming that the chemical composition remained consistent during hot pressing. The findings from this study demonstrate the potential for hot-pressed $Fe_2AlB_2$ ceramics to achieve excellent mechanical, thermal, and magnetic properties. This provides a solid foundation for further applications in various fields, particularly those requiring high-strength and functional materials. To illustrate the results in more detail, the following figures and tables will be presented: DSC heating and cooling curves of $Fe_2AlB_2$ SHS powder, along with a pseudo-binary section of the Fe-Al-B ternary phase diagram; SEM images showing the cross-section and fracture of the hot-pressed $Fe_2AlB_2$ ceramic, along with its diffraction pattern; a table comparing the properties of $Fe_2AlB_2$ ceramics obtained by hot pressing with existing literature data; and an SEM image depicting a cross-section of an $Fe_2AlB_2$ sample oxidized at 1000 degrees centigrade for 1 hour. These visuals will provide further insight into the structure, composition, and performance characteristics of the synthesized ceramics. [1-3]
+
+\newpage 
+\begin{center}
+    \includegraphics[width=10cm]{fig1.png} \\
+    \textit{Figure 1 - DSC heating and cooling curves of Fe$_2$AlB$_2$ SHS powder and a pseudo-binary section of the Fe-Al-B ternary phase diagram [1]} \\
+\end{center}
+Figure 1 depicts the thermogram for the heating and cooling of SHS powder. The observed endothermic peak at a temperature of 1284 degrees centigrade during heating is associated with the peritectic decomposition of the $Fe_2AlB_2$ compound into FeB and melt (inset in Fig. 2). Endothermic peaks of $Fe_2AlB_2$ decomposition were also observed at temperatures in the range of 1236–1280 degrees centigrade. During cooling, two distinct exothermic peaks were identified. The first, more intense peak at 1225 degrees centigrade, corresponded to the crystallization process of $Fe_2AlB_2$, while the second peak at 1065 degrees centigrade was associated with the formation of an intermediate phase of iron boride or an $Al_xFe_y$ intermetallic compound. It is worth noting that the temperature of the initial stage of $Fe_2AlB_2$ decomposition coincided with the temperature of its crystallization, which was 1245 degrees centigrade. [1]
+\begin{center}
+    \includegraphics[width=10cm]{fig2.png} \\
+    \textit{Figure 2 - SEM image of a cross-section of Fe$_2$AlB$_2$ sample oxidized at 1000 ◦C for 1 h [1]} \\
+    \end{center}
+    
+To distinguish the $Fe_2O_3$ and $Fe_2BO_4$ phases within the oxide layer, a cross-section of the $Fe_2AlB_2$ sample was examined after oxidation for 1 hour (as depicted in Fig. 2). It has been established that the hematite phase $Fe_2O_3$ has a brighter contrast than $Fe_2BO_4$ due to its higher average atomic number and is located in the upper layer up to 5 $\mu$m thick. Below is a layer with a thickness of about 20 $\mu$m composed of the boron-containing oxide phases $Fe_2BO_4$ and $Al_4B_2O_9$. The bottom oxide layer consists only of $Al_4B_2O_9$ oxide. [1]
+\begin{center}  
+   \includegraphics[width=10cm]{fig3.png} \\
+    \textit{Figure 3 - SEM images of a cross-section (a) and a fracture (b-e), as well as a diffraction pattern of hot-pressed Fe$_2$AlB$_2$ ceramics [1]}
+\end{center}
+\begin{table}[ht]
+\centering
+\textbf{Table 1 - The properties of Fe$_2$AlB$_2$ ceramics obtained by hot pressing of SHS powder in comparison with the literature data. [1]} \\
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{3cm}*{6}{>{\centering\arraybackslash}p{1.5cm}}@{}}
+\toprule
+Property & \multicolumn{6}{c}{Fe$_2$AlB$_2$} \\
+\cmidrule(r){2-7}
+
+\midrule
+Density, g/cm$^3$ & 5.41 & 5.57 & 5.51 & 5.51 & - & -  \\
+Porosity, \% & 2.3 & 4.0 & 0.8 & 0.8 & - & -  \\
+Hardness, GPa & 12.8 & 10.2 & 10.0 & - & 10.7 & 10.5  \\
+Fracture toughness, MPa$\sqrt{m}$ & 5.2 & 5.4 & 5.3 & - & 4.6 & -  \\
+Bending strength, MPa & 429 & 232 & 242 & - & 336 & 352  \\
+Thermal diffusivity, mm$^2$/s & 2.195 & - & - & - & - & -  \\
+Heat capacity, J/(g*K) & 0.622 & - & - & - & - & -  \\
+Thermal conductivity, W/(m*K) & 7.47 & - & - & 7.5 & - & -  \\
+Specific electric resistance, $\mu\Omega$m & 1.62 & 2.27 & - & 2.67 & - & -  \\
+\bottomrule
+\end{tabular}
+\end{table} 
+
+\newpage
+\section{Conclusion}
+A.Yu. Potanin and colleagues achieved notable success in the production and analysis of $Fe_2AlB_2$ ceramics using the self-propagating high-temperature synthesis (SHS) method. They obtained a powder with a high purity, containing 98.6\% $Fe_2AlB_2$ and only 1.4\% FeB as an impurity phase. The particles had a fragmentary and polyhedral structure, with an average size of 12.8 micrometers and a maximum agglomerate size of up to 57 micrometers. Differential scanning calorimetry (DSC) showed that complete decomposition of $Fe_2AlB_2$ occurs at 1284 degrees Celsius. Using hot pressing, the SHS powder was transformed into single-phase ceramics with promising properties. These included a porosity of 2.3\%, hardness of 12.8 GPa, a three-point bending strength of 429 MPa, and fracture toughness of 5.2 MPa $m^{1/2}$. The specific electrical resistivity was 1.62 microohm meters, while the heat capacity was 0.622 J/(g K). Additionally, the thermal diffusivity was measured at 2.195 $mm^2/s$, and the thermal conductivity at 7.47 W/(m K). \\
+
+Regarding the magnetocaloric effect (MCE), the researchers observed significant results for the $Fe_2AlB_2$ phase. The maximum adiabatic temperature change ($\Delta T_{ad}$) was 0.92 K at a Curie temperature of 291 K, with the magnetic field induction increasing from 0.2 to 1.8 Tesla. These results suggest that $Fe_2AlB_2$ has strong potential for use in magnetic refrigeration applications.
+Potanin's team also explored the oxidation kinetics of hot-pressed $Fe_2AlB_2$ ceramics at 1000 degrees Centigrade over a 30-hour period. The oxidation process followed a linear pattern with an oxidation rate of 5.55 $\times 10^{-4}$ $\frac{mg}{cm^2 s}$. This resulted in the formation of a multi layer oxide film, consisting of hematite ($\alpha -Fe_2O_3$) as the surface layer, warwickite ($Fe_2BO_4$) as the inner layer, and a porous layer of aluminum borate whiskers ($Al_4B_2O_9$). An iron monoboride (FeB) sublayer formed at the boundary with the base material. \\
+
+These findings suggest that the SHS method can produce high-quality $Fe_2AlB_2$ ceramics with a wide range of valuable properties. This opens up prospects for developing high-strength functional $Fe_2AlB_2$ MAB phase ceramics, with significant magnetocaloric effects and robust oxidation resistance, for potential applications in magnetic cooling and high-temperature structural materials. Moreover, the SHS method's ability to efficiently synthesize $Fe_2AlB_2$ ceramics makes it an attractive approach for scalable production, which is crucial for industrial applications. The demonstrated combination of mechanical toughness and thermal stability indicates that these ceramics could play a role in advanced engineering applications where traditional materials might fail. Additionally, the unique magnetocaloric properties open avenues for more sustainable magnetic refrigeration technologies, potentially revolutionizing how we approach energy-efficient cooling solutions.
+
+\newpage 
+\section{References} 
+[1] Potanin, A.Yu., et al. “Fabrication of high-strength magnetocaloric Fe2AlB2 MAB phase ceramics via combustion synthesis and Hot Pressing.” Materialia, vol. 33, Mar. 2024, p. 101993, https://doi.org/10.1016/j.mtla.2023.101993.  \\
+
+[2] Potanin, A.Yu, E.A. Bashkirov, E.A. Levashov, et al. “Nucleation and growth of the FE2ALB2 MAB phase in the combustion wave of mechanically activated fe–al–B reaction mixtures.” Ceramics International, vol. 49, no. 23, Dec. 2023, pp. 37849–37860, \\ https://doi.org/10.1016/j.ceramint.2023.09.113.  \\
+
+[3] Barsoum, Michel W., and Miladin Radovic. “Elastic and mechanical properties of the Max Phases.” Annual Review of Materials Research, vol. 41, no. 1, 4 Aug. 2011, pp. 195–227, https://doi.org/10.1146/annurev-matsci-062910-100448. \\
+
+
+
+\end{document}
