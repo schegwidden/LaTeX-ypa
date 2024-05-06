@@ -1,0 +1,333 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Packages
+\documentclass[10pt, a4paper]{article}
+\usepackage[top=3cm, bottom=4cm, left=3.5cm, right=3.5cm]{geometry}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd, fancyhdr, color, comment, graphicx, environ}
+\usepackage{float}
+\usepackage{mathrsfs}
+\usepackage[math-style=ISO]{unicode-math}
+%\setmathfont{TeX Gyre Termes Math}
+\usepackage{lastpage}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+\usepackage{fancyhdr}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{sectsty}
+\usepackage{thmtools}
+\usepackage{shadethm}
+\usepackage{hyperref}
+\usepackage{setspace}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Environment setup
+\mdfsetup{skipabove=\topskip,skipbelow=\topskip}
+\newrobustcmd\ExampleText{%
+An \textit{inhomogeneous linear} differential equation has the form
+\begin{align}
+L[v ] = f,
+\end{align}
+where $L$ is a linear differential operator, $v$ is the dependent
+variable, and $f$ is a given non−zero function of the independent
+variables alone.
+}
+\mdfdefinestyle{theoremstyle}{%
+linecolor=black,linewidth=1pt,%
+frametitlerule=true,%
+frametitlebackgroundcolor=gray!20,
+innertopmargin=\topskip,
+}
+\mdtheorem[style=theoremstyle]{Problem}{Problem}
+\newenvironment{Solution}{\textbf{Solution.}}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Fill in the appropriate information below
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}     
+\newcommand\course{XXXX0000}                            % <-- course name   
+\newcommand\hwnumber{0}                                 % <-- homework number
+\newcommand\Information{Someone}                        % <-- personal information
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Page setup
+\pagestyle{fancy}
+\headheight 35pt
+\lhead{\today}
+\rhead{\includegraphics[width=2.5cm]{latex-und-logo.png}}
+\lfoot{}
+\pagenumbering{arabic}
+\cfoot{\small\thepage}
+\rfoot{}
+\headsep 1.2em
+\renewcommand{\baselinestretch}{1.25}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Add new commands here
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\NN}{\mathbb N}
+\newcommand{\PP}{\mathbb P}
+\DeclareMathOperator{\Mod}{Mod} 
+\renewcommand\lstlistingname{Algorithm}
+\renewcommand\lstlistlistingname{Algorithms}
+\def\lstlistingautorefname{Alg.}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem{case}{Case}
+\newcommand{\assign}{:=}
+\newcommand{\infixiff}{\text{ iff }}
+\newcommand{\nobracket}{}
+\newcommand{\backassign}{=:}
+\newcommand{\tmmathbf}[1]{\ensuremath{\boldsymbol{#1}}}
+\newcommand{\tmop}[1]{\ensuremath{\operatorname{#1}}}
+\newcommand{\tmtextbf}[1]{\text{{\bfseries{#1}}}}
+\newcommand{\tmtextit}[1]{\text{{\itshape{#1}}}}
+
+\newenvironment{itemizedot}{\begin{itemize} \renewcommand{\labelitemi}{$\bullet$}\renewcommand{\labelitemii}{$\bullet$}\renewcommand{\labelitemiii}{$\bullet$}\renewcommand{\labelitemiv}{$\bullet$}}{\end{itemize}}
+\catcode`\<=\active \def<{
+\fontencoding{T1}\selectfont\symbol{60}\fontencoding{\encodingdefault}}
+\catcode`\>=\active \def>{
+\fontencoding{T1}\selectfont\symbol{62}\fontencoding{\encodingdefault}}
+\catcode`\<=\active \def<{
+\fontencoding{T1}\selectfont\symbol{60}\fontencoding{\encodingdefault}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Begin now!
+
+
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        \vspace*{3cm}
+            
+        \Huge
+        \textbf{Nuclear Physics}
+            
+        \vspace{1cm}
+        \huge
+        Homework 02
+            
+        \vspace{1.5cm}
+        \Large
+            
+        \textbf{Seamus Chegwidden}                      % <-- author
+        
+            
+        \vfill
+        
+           
+        \vspace{1cm}
+   
+        \includegraphics[width=0.4\textwidth]{latex-und-logo.png}
+        \\ 
+        
+        \Large
+        
+        \today
+            
+    \end{center}
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Start the assignment now
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%New problem
+\newpage
+
+\begin{Problem}[Question 1.7] 
+The $\alpha$ -active nucleus $^{212}$Po in its ground state decays to the ground state of $^{208}$Pb by emitting an 8.784-MeV $\alpha$ particle. Calculate the energy of the recoiling $^{208}$Pb nucleus and, hence, the mass (in atomic mass units) of $^{212}$Pb. Use mass data from \\Appendix F.
+\end{Problem}
+
+\begin{Solution} \\ \\
+$\frac{E_D}{E_{\alpha}}=\frac{(m_D\nu_D)^2\times m_{\alpha}}{(m_{\alpha}\nu_{\alpha})^2\times m_D}$ \\ \\
+$E_{208_{Pb}}=8.784(\frac{4}{208})$\\ \\
+\boxed{$E_{208_{Pb}}=0.169 MeV}$ \\ \\
+$Q=8.784+0.169=\boxed{8.953 MeV}$ \\ \\
+$E=\Delta mc^2$ \rightarrow $8.953\times 10^6 \times 1.602\times 10^{-19}=0.00149515 MeV$ \\ \\
+$m_{212_{Po}}=\frac{0.00149515}{0.169}+212$ \\ \\
+\boxed{$m_{212_{Po}}=212.009 u$}
+
+\end{Solution}
+
+
+\newpage
+
+\begin{Problem}[Question 1.8] 
+$^{36}$Cl decays into $^{36}$S (35.967081 u) and $^{36}$Ar. If the energy release is 1.142 MeV to $^{36}$S and 0.709 MeV to $^{36}$Ar, calculate the masses of $^{36}$Cl and $^{36}$Ar. Describe the modes of decay. 
+\end{Problem}
+
+\begin{Solution} \\ \\
+$E=\Delta mc^2$ \\ \\
+$1.142\times 10^6 \times 1.602 \times 10^{-19}=(m_{36_{Cl}}-35.967081)\times 1.67\times 10^{-27}\times (3\times 10^8)^2$ \\ \\
+\boxed{$m_{36_{Cl}}=35.9683 u$} \\ \\
+
+$E=\Delta mc^2$ \\ \\
+$0.709\times 10^6 \times 1.602 \times 10^{-19}=(35.9683-m_{36_{Ar}})\times 1.67\times 10^{-27}\times (3\times 10^8)^2$ \\ \\
+\boxed{$m_{36_{Ar}}=35.96754 u$}  \\ \\
+
+\begin{center}
+    {The $^{36}Cl \beta ^{-}$ decays to $^{36}Ar$ \\
+    The $^{36}Ar \beta ^{+}$ decays via electron capture or emission into $^{36}S$
+\end{center}
+
+\end{Solution}
+
+\newpage 
+\begin{Problem}[Question 1.9] 
+An initial number $N_a(0)$ of nuclei A decays into daughter nuclei B, which are also radioactive. The respective decay probabilities are $\lambda_A$ and $\lambda_B$. If $\lambda_B$=$2\lambda_A$, calculate the time (in terms of $\lambda_A$) when $N_B$ is at its maximum. Calculate $N_B$ (max) in terms of $N_A$(0).
+\end{Problem}
+
+\begin{Solution} \\ \\
+$N_B(t)=\frac{\lambda_A}{\lambda_B-\lambda_A}\times N_A(0)(e^{-\lambda_At}-e^{-\lambda_Bt})$ \\ \\
+$N_B(t)=\frac{\lambda_A}{2\lambda_A-\lambda_A}\times N_A(0)(e^{-\lambda_At}-e^{-2\lambda_At})$ \\ \\
+Maximum occurs when the first derivative is equal to zero. \\ \\
+$0=\frac{dR}{dt}[\frac{\lambda_A}{2\lambda_A-\lambda_A}\times N_A(0)(e^{-\lambda_At}-e^{-2\lambda_At})]$ \\ \\
+\boxed{$0=-\lambda_Ae^{-\lambda_At}+2\lambda_Ae^{-2\lambda_At}$} \\ \\
+Solving for the maximum time. \\ \\
+$t_{max}=\frac{ln(\frac{\lambda_B}{\lambda_A})}{\lambda_B-\lambda_A}$ \\ \\
+$t_{max}=\frac{ln(\frac{2\lambda_A)}{\lambda_A}}{2\lambda_A-\lambda_A}$ \\ \\
+\boxed{$t_{max}=\frac{ln(2)}{\lambda_A}$} \\ \\
+Solving for $N_{B_{max}}$ \\ \\
+$N_{B_{max}}=\frac{\lambda_A\times N_{A_{0}}}{-\lambda_A}\times e^{-\lambda_At}$ \\ \\
+Plug in the upper limit as t, and the lower limit as zero, with respect to times. \\ \\
+\boxed{$N_{B_{max}}=N_{A_{0}}\times 1-e^{-\lambda_At}}$
+
+
+\end{Solution}
+
+\newpage
+
+\begin{Problem}[Question 1.10] 
+Derive the formula $N(t)=P(1-e^{-\lambda t})/\lambda$ for the production of a radioactive nuclide (decay constant $\lambda$) as a function of time, given that the production rate is constant at P nuclei per second. Estimate the time it will take to produce a 100 $\mu$ Ci source of $^{36}$Cl by irradiating 1.00 grams of natural nickel chloride (molecular weight 129.6) in a neutron-flux of 1\times 10$^{14}$ cm $^{-2}$ s$^{-1}$. \\
+The cross section for the neutron capture reaction $^{35}$Cl$(n,\gamma)$ $^{36}$Cl is 43 b and the half life of $^{36}$Cl is long $(3 \times 10^5 years)$. 75.8 percent of natural chlorine consists of $^{35}$Cl. 
+\end{Problem} 
+
+\begin{Solution} 
+Number of Nuclei
+$$\frac{dN}{dt}=P-\lambda N$$
+$$\int_0^{N(t)}\frac{dN}{P-\lambda N}=\int_0^tdt \rightarrow -\frac{1}{\lambda}[ln(P-\lambda N(t))-ln(P)]=t$$
+$$\frac{P-\lambda (N(t))}{P}=e^{-\lambda t}\rightarrow 1-\frac{\lambda N(t)}{P}=e^{-\lambda t}=\frac{\lambda N(t)}{P}$$
+\begin{center}\boxed{{$$N(t)}=\frac{P}{\lambda}(1-e^{-\lambda t})}$$ \end{center} 
+Activity
+$$A=\int\frac{dN}{dt}=\int P-\lambda N $$
+$$P-\lambda [\frac{P}{\lambda}(1-e^{-\lambda t})] \\ $$
+\begin{center}\boxed{{$$A=Pe^{-\lambda t}}}$$ \end{center} 
+Time
+$$t=\frac{1}{\lambda}ln(\frac{P}{A})$$
+
+Calculating Values
+$$1b=1\times 10^{-24}cm^2$$
+$$\text{Moles of NiCl}=\frac{1}{129.6}\rightarrow\text{atoms of NiCl}=4.64\times 10^{21}$$
+$$P=\frac{75.8}{100}\times 4.64\times 10^{21}\times 43\times 10^{-24}=151.23\times 10^{11}\textit{atom/s}$$
+$$t=\frac{1}{\lambda}ln(\frac{151.23\times 10^{11}}{3.70\times 10^{6}})$$
+\begin{center}\boxed{{$$t}=21.4\textit{days}}}$$ \end{center} 
+
+
+
+
+\end{Solution}
+
+\newpage
+
+\begin{Problem}[Question 1.11] 
+Using the information given in Problem 1.10, calculate the fraction of $^{35}$Cl which is transformed if 1 g of nickel chloride is irradiated for 1 day.
+\end{Problem}
+
+\begin{Solution} \\ \\
+Known equations: \\
+$R=N \sigma \Phi $ \\
+$\Phi=n_p\times \nu$ \\
+$\sigma=\frac{event-rate-per-nucleus}{incident-flux}$ \\ \\
+$$N_f=N_i\sigma \Phi t$$ 
+$$time = 86,400 s $$ 
+$$\sigma=4.3\times 10^{-23}cm^2$$ 
+$$\Phi=10^{14}cm^2s^{-1}$$ 
+$$N_i=1$$ 
+$$\boxed{N_f=3.72\times 10^{-4}}$$
+
+
+
+
+\end{Solution}
+
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Complete the assignment now
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Example of a list of equations.
+%\begin{align*}
+%    x &= 1\\
+%    y &= 2
+%\end{align*}
+
+%Example of a matrix.
+%$$\begin{pmatrix}1&0\\0&1\end{pmatrix}$$
+
+%Example of a lemma.
+%\begin{lemma}
+%    This is a lemma.
+%\end{lemma}
+
+%Example of a proof.
+%\begin{proof}
+%    Write your proof here.
+%\end{proof}
+
+%Example of including a picture.
+%\begin{center}
+%    \includegraphics[width = 4cm]{latex-und-logo.png}
+%\end{center}
+
+%Example of referring to a piece of code.
+%\lstinputlisting[language = python]{Program Solution.py}
+
+%Example of a table.
+%\begin{equation*}\begin{tabular}{ c c c }
+%                & Mean          & SD \\ 
+%     Fall 2077  & 7.046512      & 1.714552 \\  
+%     Fall 1977  & 9.102941      & 1.568919
+%\end{tabular}\end{equation*}
+
+%Overall, this is a quite basic template for assignments, and above are only some basic features. I included enough packages and set a few environments. You may modify them or add features to fit your personal preference. Enjoy using it!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
